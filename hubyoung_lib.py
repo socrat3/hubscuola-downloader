@@ -4,11 +4,11 @@ import shutil
 import requests
 import sqlite3
 import zipfile
-from PyPDF2 import PdfFileMerger
+from PyPDF2 import PdfMerger
 
 
 def merge_pdf(extracted_files, output):
-    merger = PdfFileMerger()
+    merger = PdfMerger()
 
     for pdf in extracted_files:
         merger.append(io.BytesIO(pdf))
